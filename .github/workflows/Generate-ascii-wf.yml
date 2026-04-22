@@ -19,8 +19,13 @@ jobs:
             ls -ltra
             grep -i "tux" tux.txt
             cat tux.txt
-        # - name: List files
-        #   run: pwd
+    ascii_job2:
+        needs: ascii_job
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v6
+        - name: List files
+          run: pwd
         
         # - name: List files
         #   run: ls
