@@ -7,4 +7,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Welcome message
-          run: Echo "my first workflow in first job"
+          run: echo "my first workflow in first job"
