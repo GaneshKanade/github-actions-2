@@ -11,7 +11,7 @@ jobs:
         - name: install Cowsay program
           run: |
             sudo apt-get install cowsay -y
-            cowsay -f tux "Linux rules the servers!" >> tus.txt
+            cowsay -f tux "Linux rules the servers!" >> tux.txt
             ls -ltra
             grep -i tux.txt
             cat tux.txt
