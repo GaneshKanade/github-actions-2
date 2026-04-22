@@ -2,7 +2,9 @@ name: Generate ASCII artwork
 
 # on: push
 on:
-   workflow_dispatch: 
+    schedule:
+      - cron: '*/5 * * * *'
+    workflow_dispatch:
 
 jobs:
     ascii_job:
