@@ -3,16 +3,18 @@ name: My first workflow
 on: push
 
 jobs:
-    first_job:
+    ascii_job:
         runs-on: ubuntu-latest
         steps:
         - name: Chekcout Repo
           uses: actions/checkout@v6
-        - name: Welcome message and R
+        - name: install Cowsay program
           run: |
-            echo "my first workflow in first job"
+            sudo apt-get install cowsay -y
+            cowsay -f tux "Linux rules the servers!" >> tus.txt
             ls -ltra
-            cat README.md
+            grep -i tux.txt
+            cat tux.txt
         # - name: List files
         #   run: pwd
         
