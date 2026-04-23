@@ -1,6 +1,5 @@
 name: Generate ASCII artwork
 
-# on: push
 on:
     schedule:
       - cron: '*/5 * * * *'
